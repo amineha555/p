@@ -1,0 +1,134 @@
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+body {
+    background-color: #E6E6E6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.white-card, #i {
+    background-color: #4D4D4D;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+#profile-img {
+    border-radius:50%;
+    width: 150px;
+    margin: 18px auto 20px;
+    display: flex;
+}
+
+p {
+    font-size: 18px;
+    color: #D9D9D9;
+}
+
+h1, h2 {
+    text-align: center;
+    background: #333333;
+    color: #FFFFFF;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+#link {
+    font-size: 24px;
+    text-align: center;
+}
+
+#il ul, #i li {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+#il li {
+    margin: 10px;
+}
+
+#il li a {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #707070;
+    color: #D9D9D9;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#il li a .icon {
+    position: relative;
+    z-index: 3;
+}
+
+#il li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333333;
+    transition: .5s;
+    z-index: 2;
+    transform: scaleX(0); 
+    transform-origin: left; 
+}
+
+#il li a:hover:before {
+    transform: scaleX(1); 
+}
+
+#il li:nth-child(1) a:before {
+    background: #3b5999;
+}
+
+#il li:nth-child(2) a:before {
+    background: #c13584;
+}
+
+@media (max-width: 960px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        width: 95%;
+    }
+}
